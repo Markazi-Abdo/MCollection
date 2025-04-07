@@ -8,6 +8,6 @@ export const dbLogger = winston.createLogger({
     ),
     transports: [
         new winston.transports.Console,
-        new winston.transports.File({ filename: "/database/database.log" })
+        new winston.transports.File({ filename: "/logs/database/database.log" })
     ]
 })

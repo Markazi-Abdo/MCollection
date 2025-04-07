@@ -1,6 +1,6 @@
 import winston from "winston"
 
-export const serverLogger = winston.createLogger({
+export const authLogger = winston.createLogger({
     level: "info",
     format: winston.format.combine(
         winston.format.timestamp(),
@@ -8,6 +8,6 @@ export const serverLogger = winston.createLogger({
     ),
     transports: [
         new winston.transports.Console,
-        new winston.transports.File({ filename: "logs/server/server.log" })
+        new winston.transports.File({ filename: "/logs/database/auth.log" })
     ]
 })
